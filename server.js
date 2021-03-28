@@ -22,7 +22,7 @@ function handleLocation(request, response){
   const getLocation = require('./Data/location.json');
   const city = request.query.city;
   let obj = {
-    search_query:city,
+    search_query:getLocation[0].display_name.split(',')[0],
     formatted_query: getLocation[0].display_name,
     latitude: getLocation[0].lat,
     longitude: getLocation[0].lon
